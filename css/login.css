@@ -1,0 +1,223 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: serif, sans-serif;
+}
+
+header{
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.1)), url('../image/todo.jpg');
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+nav{
+	width: 100%;
+	height: 15vh;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	background: rgba(0, 0, 0, 0.2);
+}
+
+nav .logo{
+	width: 25%;
+	text-align: center;
+	color: #f87217;
+}
+
+nav .menu{
+	flex: 1;
+	text-align: right;	
+}
+
+nav .menu a{
+	padding: 15px 30px;
+	width: 25%;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	position: relative;
+	transition: all 0.5s ease;
+}
+
+nav .menu a:hover{
+	color: #f87217;
+}
+
+nav .menu a:nth-child(4){
+	color: #f87217;
+}
+
+main{
+	width: 100%;
+	height: 85vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container{
+	background-color: #fff;
+	position: relative;
+	max-width: 430px;
+	width: 100%;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+}
+
+.container .login{
+	padding: 30px;
+}
+
+.container .login .title{
+	position: relative;
+	font-size: 27px;
+	font-weight: 600;
+}
+
+.login .input-field{
+	position: relative;
+	height: 50px;
+	width: 100%;
+	margin-top: 30px;
+}
+
+.input-field input{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 0 35px;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	border-bottom: 2px solid #ccc;
+	border-top: 2px solid transparent;
+	transition: all 0.5s ease;
+}
+
+.input-field input:is(:focus, :valid){
+	border-bottom-color: #F87217;
+
+}
+
+.input-field i{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #999;
+	font-size: 23px;
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+	color: #F87217;
+}
+
+.input-field i.icon{
+	left: 0;
+}
+
+.input-field i.showHidePw{
+	right: 0;
+}
+
+.login .checkbox-text{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content{
+	display: flex;
+	align-items: center;	
+}
+
+.checkbox-content input{
+	margin: 0 6px 0 4px;
+	accent-color: #F87217;
+}
+
+.checkbox-content label{
+	font-size: 17px;
+	font-weight: 300;
+}
+
+.login .text{
+	font-size: 17px;
+	color: #F87217;
+	text-decoration: none;
+}
+
+.login .text:hover{
+	text-decoration: underline;
+}
+
+.login .button{
+	margin-top: 30px;
+}
+
+.login .button input{
+	border: none;
+	color: #fff;
+	background-color: #F87217;
+	letter-spacing: 1px;
+	font-size: 18px;
+	font-weight: 600;
+	border-radius: 8px;
+	transition: all 0.3s ease;
+}
+
+.button input:hover{
+	background-color: #CC6600;
+}
+
+.login .login-signup{
+	font-size: 17px;
+	margin-top: 26px;
+	text-align: center;
+}
+
+nav .uil{
+	display: none;
+}
+
+@media (max-width: 700px){
+	
+	.menu a{
+		display: block;
+	}
+	
+	.menu{
+		position: absolute;
+		background: #7F462C;
+		height: 100vh;
+		width: 200px;
+		top: 0;
+		right: -200px;
+		text-align: left;
+		z-index: 2;
+		transition: 1s ease;
+	}
+
+	nav .uil{
+		display: block;
+		color: #fff;
+		margin: 10px;
+		font-size: 25px;
+		cursor: pointer;
+	}
+
+	.menu{
+		padding: 15px;
+	}
+}
+
+
+
+
